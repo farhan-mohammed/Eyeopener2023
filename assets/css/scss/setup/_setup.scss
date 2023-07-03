@@ -1,0 +1,504 @@
+body {
+    border: none;
+    color: #111;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 17px;
+}
+
+a {
+    color: #0093C2;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.fleft {
+    float: left;
+}
+
+.fright {
+    float: right;
+}
+
+::-moz-selection {
+    background: #222;
+    color: #FFF;
+}
+
+::selection {
+    background: #222;
+    color: #FFF;
+}
+
+::-webkit-input-placeholder {
+    color: #A9A9A9;
+}
+
+:-ms-input-placeholder {
+    color: #A9A9A9;
+}
+
+/* Clearing ---------------------------------- */
+.clear:after,
+.group:after,
+.entry-content:after,
+.widget-content:after,
+[class*=__inner-container]:after {
+    clear: both;
+    content: "";
+    display: block;
+}
+
+/* Reset List Style -------------------------- */
+.reset-list-style,
+.reset-list-style ul,
+.reset-list-style ol {
+    list-style: none;
+    margin: 0;
+}
+
+.reset-list-style li {
+    margin: 0;
+}
+
+/* Screen Reader Text ------------------------ */
+.screen-reader-text {
+    clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
+    height: 0.1rem;
+    overflow: hidden;
+    position: absolute !important;
+    left: -999999rem;
+    width: 0.1rem;
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 0.3rem;
+    box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    height: auto;
+    left: 0.5rem;
+    line-height: normal;
+    padding: 1.5rem 2.3rem 1.4rem 2.3rem;
+    text-decoration: none;
+    top: 0.5rem;
+    width: auto;
+    z-index: 100000;
+}
+
+/* Skip Link --------------------------------- */
+.skip-link {
+    position: absolute;
+    left: -9999rem;
+    top: 2.5rem;
+    z-index: 999999999;
+}
+
+.skip-link:focus {
+    left: 2.5rem;
+    text-decoration: none;
+}
+
+/* Accessibility Settings -------------------- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0s !important;
+        transition-duration: 0s !important;
+    }
+}
+
+/* Transitions ------------------------------- */
+body a,
+.secondary-menu>li.menu-item-has-children a:after,
+.primary-menu li a,
+.post-tags a:before,
+.tagcloud a:before,
+.search-button {
+    transition: all 0.1s ease-in-out;
+}
+
+.post-nav a,
+.respond input,
+.respond textarea,
+.archive-nav a,
+.blog-title a,
+.primary-menu ul .menu-item-has-children::after,
+.secondary-menu ul .menu-item-has-children::after,
+.to-the-top,
+.flex-direction-nav .flex-prev,
+.flex-direction-nav .flex-next {
+    transition: all 0.2s ease-in-out;
+}
+
+/* -------------------------------------------------------------------------------- */
+/*	X.	Element Base
+/* -------------------------------------------------------------------------------- */
+p,
+blockquote,
+li,
+address,
+dl,
+pre {
+    line-height: 1.5;
+    margin-bottom: 1.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 50px 0 25px;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+blockquote {
+    padding: 30px 30px 30px 90px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    position: relative;
+    font-style: italic;
+}
+
+blockquote p {
+    font-style: italic;
+}
+
+blockquote:after {
+    content: "”";
+    width: 90px;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    color: #0093C2;
+    position: absolute;
+    top: 31px;
+    left: 0px;
+}
+
+blockquote cite {
+    display: block;
+    margin-top: 1.1em;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 0.75em;
+    line-height: 120%;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+blockquote cite:before {
+    content: "— ";
+}
+
+hr {
+    width: 128px;
+    max-width: 60%;
+    height: 2px;
+    background: #DDD;
+    margin: 50px auto;
+    border: 0;
+}
+
+hr.is-style-wide,
+hr.is-style-dots {
+    max-width: 100%;
+    width: 100%;
+}
+
+hr.is-style-dots {
+    background: none;
+}
+
+code,
+kbd,
+pre {
+    background-color: #eee;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 0.85em;
+}
+
+.highlight {
+    background-color: #fcf8a5;
+    display: inline;
+    padding: 2px 3px;
+}
+
+kbd,
+code {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+dl dt {
+    font-weight: bold;
+}
+
+ul,
+ol {
+    margin: 0.5em 0 0.5em 1.5em;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+address {
+    background: #F1F1F1;
+    padding: 3% 3.5%;
+}
+
+pre {
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    line-height: 140%;
+    padding: 2% 2.5%;
+    background: #eee;
+    border: 1px solid #ddd;
+}
+
+p.has-drop-cap:not(:focus):first-letter {
+    font-size: 5.9em;
+    font-weight: 400;
+}
+
+/* Post Media -------------------------------- */
+figure {
+    margin: 0;
+}
+
+/* Makes Jetpack Tiled Galleries play nice with the related posts field */
+.tiled-gallery {
+    clear: none !important;
+}
+
+.wp-caption {
+    max-width: 100%;
+}
+
+.wp-caption>a,
+.wp-caption img {
+    display: block;
+}
+
+.wp-caption-text,
+.gallery-caption,
+figcaption {
+    color: #444;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 130%;
+    margin: 12px auto 0;
+    text-align: center;
+}
+
+.gallery-caption {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.gallery-icon a {
+    border: none;
+}
+
+/* Tables ------------------------------------ */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    font-size: 0.9em;
+    margin: 2em 0;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 10px;
+    margin: 0;
+    overflow: visible;
+    line-height: 120%;
+    border-bottom: 1px solid #DDD;
+}
+
+caption {
+    color: #111;
+    text-align: center;
+    padding: 10px;
+}
+
+thead {
+    vertical-align: bottom;
+    white-space: nowrap;
+}
+
+th {
+    font-weight: 700;
+    color: #111;
+}
+
+/* Forms ------------------------------------- */
+fieldset {
+    padding: 25px;
+    border: 2px solid #ddd;
+    margin-bottom: 1em;
+}
+
+fieldset legend {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 0.8rem;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 12px;
+    background: #0093C2;
+    color: #fff;
+}
+
+label {
+    font-size: 1rem;
+    font-family: "Gothic A1", sans-serif;
+    font-weight: 700;
+}
+
+input,
+textarea {
+    font-family: "Gothic A1", sans-serif;
+}
+
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=url],
+input[type=date],
+input[type=month],
+input[type=time],
+input[type=datetime],
+input[type=datetime-local],
+input[type=week],
+input[type=number],
+input[type=search],
+input[type=tel],
+input[type=color],
+textarea {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #111;
+    font-size: 0.9em;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+input[type=file] {
+    padding: 10px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+textarea {
+    height: 180px;
+    line-height: 140%;
+}
+
+button,
+.button,
+.faux-button,
+:root .wp-block-button__link,
+:root .wp-block-file__button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+    padding: 16px 20px;
+    margin: 0;
+    border: none;
+    border-radius: 2px;
+    background: #0093C2;
+    font-size: 0.85rem;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    -webkit-appearance: none;
+}
+
+input[type=submit]+input[type=reset],
+input[type=submit]+input[type=button],
+input[type=reset]+input[type=submit],
+input[type=reset]+input[type=button],
+input[type=button]+input[type=reset],
+input[type=submit]+input[type=submit] {
+    margin-left: 5px;
+}
+
+button:hover,
+.button:hover,
+.faux-button:hover,
+:root .wp-block-button__link:hover,
+:root .wp-block-file__button:hover,
+input[type=button]:hover,
+input[type=reset]:hover,
+input[type=submit]:hover {
+    cursor: pointer;
+    opacity: 1;
+}

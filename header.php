@@ -38,6 +38,8 @@
 							?>
 						</ul><!-- .secondary-menu -->
 					<?php endif; ?>
+					<img src="/wp-content/uploads/2023/07/PG12_EyeLogo.png" />
+
 					<?php if (has_nav_menu('social')): ?>
 						<ul class="social-menu reset-list-style">
 							<?php
@@ -82,31 +84,31 @@
 				<?php
 
 				$custom_logo_id = get_theme_mod('custom_logo');
-				$legacy_logo_url = get_theme_mod('rowling_logo');
 				$blog_title_elem = ((is_front_page() || is_home()) && !is_page()) ? 'h1' : 'div';
 				$blog_title_class = $custom_logo_id ? 'blog-logo' : 'blog-title';
 
 				$blog_title = get_bloginfo('title');
 				$blog_description = get_bloginfo('description');
 
-				if ($custom_logo_id || $legacy_logo_url):
-
-					$custom_logo_url = $legacy_logo_url ? $legacy_logo_url : wp_get_attachment_image_url($custom_logo_id, 'full');
-
+				if ($custom_logo_id):
+					$custom_logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
 					?>
-
-					<<?php echo $blog_title_elem; ?> class="
-						<?php echo esc_attr($blog_title_class); ?>">
-						<a class="logo" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-							<img src="<?php echo esc_url($custom_logo_url); ?>">
-							<span class="screen-reader-text">
-								<?php echo $blog_title; ?>
-							</span>
-						</a>
-					</<?php echo $blog_title_elem; ?>>
+					<div class="blog-header">
+						<<?php echo $blog_title_elem; ?> class="
+							<?php echo esc_attr($blog_title_class); ?>">
+							<a class="logo" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+								<img src="<?php echo esc_url($custom_logo_url); ?>">
+								<span class="screen-reader-text">
+									<?php echo $blog_title; ?>
+								</span>
+							</a>
+						</<?php echo $blog_title_elem; ?>>
+						<div class="blog-description">
+							<?php echo wpautop($blog_description); ?>
+						</div>
+					</div>
 
 				<?php elseif ($blog_description || $blog_title): ?>
-
 					<<?php echo $blog_title_elem; ?> class="
 						<?php echo esc_attr($blog_title_class); ?>">
 						<a href="<?php echo esc_url(home_url()); ?>" rel="home"><?php echo $blog_title; ?></a>
@@ -138,7 +140,7 @@
 
 			<div class="section-inner group">
 
-				<ul class="primary-menu reset-list-style dropdown-menu">
+				<ul id='nav' class="primary-menu reset-list-style dropdown-menu">
 
 					<?php if (has_nav_menu('primary')) {
 

@@ -1,0 +1,110 @@
+/* Secondary Menu ---------------------------- */
+.secondary-menu {
+    font-size: 0.9rem;
+}
+
+.secondary-menu a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.secondary-menu li {
+    line-height: 1;
+    position: relative;
+}
+
+.secondary-menu>li {
+    float: left;
+}
+
+.secondary-menu>li>a {
+    display: block;
+    padding: 10px 8px;
+    color: $blue;
+
+}
+
+.secondary-menu>li.menu-item-has-children>a {
+    padding-right: 30px;
+}
+
+
+// .secondary-menu>li:hover>a,
+// .secondary-menu>li.focus>a,
+// .secondary-menu li.current-menu-item>a {
+//     color: #000;
+// }
+
+.secondary-menu>li:hover>a,
+.secondary-menu>li.focus>a {
+    filter: brightness(85%);
+}
+
+
+/* Sub Menus --------------------------------- */
+.secondary-menu ul {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    z-index: 999;
+    left: -9999px;
+    top: 50px;
+    padding: 4px;
+    background-color: #fff;
+}
+
+.secondary-menu ul .menu-item-has-children::after {
+    content: "";
+    display: block;
+    border: 4px solid transparent;
+    border-left-color: #666;
+    position: absolute;
+    z-index: 1001;
+    right: 6px;
+    top: 50%;
+    margin-top: -4px;
+}
+
+.secondary-menu ul li {
+    width: 200px;
+    background: #fff;
+}
+
+.secondary-menu ul a {
+    display: block;
+    padding: 4px;
+    margin: 4px;
+    line-height: 130%;
+    color: #000;
+}
+
+.secondary-menu ul li:hover>a,
+.secondary-menu ul li.focus>a {
+    color: --main-blue;
+}
+
+.secondary-menu ul .menu-item-has-children:hover::after,
+.secondary-menu ul .menu-item-has-children.focus::after {
+    border-left-color: #000;
+}
+
+.secondary-menu>li:hover>ul,
+.secondary-menu>li.focus>ul {
+    opacity: 1;
+    left: 0px;
+    top: 100%;
+}
+
+/* Deep Down --------------------------------- */
+.secondary-menu ul ul {
+    padding-top: 0;
+    top: 5px;
+}
+
+.secondary-menu li>ul>li:hover>ul,
+.secondary-menu li>ul>li.focus>ul {
+    opacity: 1;
+    left: 200px;
+    top: 0;
+    margin-left: 0;
+}

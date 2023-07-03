@@ -47,6 +47,12 @@ if ( ! function_exists( 'rowling_setup' ) ) :
 		
 	}
 	add_action( 'after_setup_theme', 'rowling_setup' );
+	function limit_homepage_posts($query) {
+		if (is_home() && $query->is_main_query()) {
+			$query->set('posts_per_page', 9);
+		}
+	}
+	add_action('pre_get_posts', 'limit_homepage_posts');
 endif;
 
 
