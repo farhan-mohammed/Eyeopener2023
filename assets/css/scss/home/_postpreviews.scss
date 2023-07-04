@@ -36,16 +36,24 @@
 .post-image>a,
 .post-image img {
     display: block;
+    border-radius: 5px;
+
 }
 
 a .post-timeago {
-    & {
-        color: #888;
-        font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-        &:hover {
-            color: #888;
-        }
+    &>img {
+        height: 1.5em;
+    }
+
+    color: #888;
+    font-weight: 700;
+
+    &:hover {
+        color: #888;
     }
 }
 
@@ -87,7 +95,6 @@ a .post-timeago {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 30px;
             }
         }
 
@@ -156,7 +163,7 @@ a .post-timeago {
     display: block;
     width: 22px;
     height: 26px;
-    background: #0093C2;
+    background: $blue;
     color: #fff;
     position: absolute;
     right: 15px;
@@ -167,7 +174,7 @@ a .post-timeago {
     content: "";
     display: block;
     position: absolute;
-    border: 11px solid #0093C2;
+    border: 11px solid $blue;
     border-top-width: 0;
     border-bottom: 5px solid transparent;
     bottom: -5px;

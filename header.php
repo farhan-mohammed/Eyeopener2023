@@ -3,9 +3,14 @@
 <html class="no-js" <?php language_attributes(); ?>>
 
 <head profile="http://gmpg.org/xfn/11">
-
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="/wp-content/themes/test2023/assets/img/favicon.png">
 
 	<?php wp_head(); ?>
 
@@ -38,7 +43,7 @@
 							?>
 						</ul><!-- .secondary-menu -->
 					<?php endif; ?>
-					<img src="/wp-content/uploads/2023/07/PG12_EyeLogo.png" />
+					<img src="/wp-content/themes/test2023/assets/img/PG12_EyeLogo.png" class='eyelogo' />
 
 					<?php if (has_nav_menu('social')): ?>
 						<ul class="social-menu reset-list-style">
@@ -90,37 +95,26 @@
 				$blog_title = get_bloginfo('title');
 				$blog_description = get_bloginfo('description');
 
-				if ($custom_logo_id):
-					$custom_logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
-					?>
-					<div class="blog-header">
-						<<?php echo $blog_title_elem; ?> class="
-							<?php echo esc_attr($blog_title_class); ?>">
-							<a class="logo" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-								<img src="<?php echo esc_url($custom_logo_url); ?>">
-								<span class="screen-reader-text">
-									<?php echo $blog_title; ?>
-								</span>
-							</a>
-						</<?php echo $blog_title_elem; ?>>
-						<div class="blog-description">
-							<?php echo wpautop($blog_description); ?>
-						</div>
-					</div>
-
-				<?php elseif ($blog_description || $blog_title): ?>
+				$custom_logo_url = wp_get_attachment_image_url($custom_logo_id, 'full');
+				?>
+				<div class="blog-header">
 					<<?php echo $blog_title_elem; ?> class="
 						<?php echo esc_attr($blog_title_class); ?>">
-						<a href="<?php echo esc_url(home_url()); ?>" rel="home"><?php echo $blog_title; ?></a>
+						<a class="logo" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+
+							<img src="<?php echo esc_url($custom_logo_url); ?>"
+								onerror="this.src='/wp-content/themes/test2023/assets/img/theye.png';">
+							<span class="screen-reader-text">
+								<?php echo $blog_title; ?>
+							</span>
+						</a>
 					</<?php echo $blog_title_elem; ?>>
+					<div class="blog-description">
+						<?php echo wpautop($blog_description); ?>
+					</div>
+				</div>
 
-					<?php if ($blog_description): ?>
-						<div class="blog-description">
-							<?php echo wpautop($blog_description); ?>
-						</div>
-					<?php endif; ?>
 
-				<?php endif; ?>
 
 				<div class="nav-toggle">
 

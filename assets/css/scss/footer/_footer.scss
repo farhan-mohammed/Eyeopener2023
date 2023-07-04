@@ -1,0 +1,113 @@
+/* -------------------------------------------------------------------------------- */
+/*	16.	Credits
+/* -------------------------------------------------------------------------------- */
+.credits {
+    background: $blue;
+    position: relative;
+
+    & a {
+        text-decoration: none;
+    }
+
+    & .section-inner {
+        padding: 30px 0;
+        position: relative;
+    }
+
+    & p {
+        color: #fff;
+        margin: 0;
+    }
+
+    & .copyright {
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 0 #111;
+
+        & a {
+            color: #fff;
+
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+
+
+}
+
+
+.to-the-top {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 99px;
+    border: 2px solid $blue;
+    background: #fff;
+    position: absolute;
+    top: -25px;
+    right: 0;
+    transition: background-color 0.2s top 0.2s;
+
+    &:hover {
+        color: $blue;
+        top: -35px;
+        background-color: $blue;
+
+        & .fa {
+            color: #fff;
+        }
+    }
+
+    & .fa {
+        color: $blue;
+        transition: color 0.2s;
+        display: block;
+        font-size: 28px;
+        margin-top: -16px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        text-align: center;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+        width: 100%;
+    }
+
+    & .attribution {
+        margin-top: 12px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #999;
+
+        &+.attribution {
+            margin-top: 6px;
+        }
+
+        & a {
+            color: rgba(255, 255, 255, 0.5);
+
+            &:hover {
+                color: rgba(255, 255, 255, 0.5);
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+.footer-widget-area {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+
+    &>div {
+        flex: 1;
+    }
+
+}

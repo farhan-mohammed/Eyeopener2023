@@ -46,8 +46,8 @@
 		<?php endif; ?>
 		<a href="<?php the_permalink(); ?>">
 
-			<div class="post-timeago">
-				<img class="post-timeago__img" src="/wp-content/uploads/2023/06/PG12_EyeLogo.png" />
+			<div class="post-timeago"> <img src="/wp-content/themes/test2023/assets/img/PG12_EyeLogo.png" />
+
 
 				<div class="post-timeago__text">
 					<?php the_time(get_option('date_format')); ?>

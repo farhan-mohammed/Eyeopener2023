@@ -120,7 +120,7 @@ Text Domain: test-theme
 
 .search-container .search-button {
     background: none;
-    color: #0093C2;
+    color: $blue;
     display: block;
     padding: 0;
     position: absolute;
@@ -136,7 +136,7 @@ Text Domain: test-theme
 
 .search-container .search-button:hover {
     cursor: pointer;
-    color: #0093C2;
+    color: $blue;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -176,7 +176,7 @@ Text Domain: test-theme
 }
 
 .archive-title {
-    border-bottom: 2px solid #0093C2;
+    border-bottom: 2px solid $blue;
     float: left;
     margin: 0 0 -2px 0;
     padding: 0 0 10px;
@@ -327,7 +327,7 @@ Text Domain: test-theme
 }
 
 .single-post .post-meta a {
-    color: #0093C2;
+    color: $blue;
     text-decoration: none;
 }
 
@@ -353,7 +353,7 @@ Text Domain: test-theme
 }
 
 .single-post .post-image-caption .fa {
-    color: #0093C2;
+    color: $blue;
     position: absolute;
     top: 50%;
     margin-top: -7px;
@@ -402,7 +402,7 @@ Text Domain: test-theme
 }
 
 .post-content .page-links a:hover {
-    background: #0093C2;
+    background: $blue;
     color: #fff;
     text-decoration: none;
 }
@@ -464,13 +464,13 @@ Text Domain: test-theme
 
 .post-tags a:hover,
 .tagcloud a:hover {
-    background: #0093C2;
+    background: $blue;
     color: #fff;
 }
 
 .post-tags a:hover:before,
 .tagcloud a:hover:before {
-    border-right-color: #0093C2;
+    border-right-color: $blue;
 }
 
 /* Post Author ------------------------------- */
@@ -559,62 +559,7 @@ Text Domain: test-theme
     content: "\f015";
 }
 
-/* Related Posts ----------------------------- */
-.post-inner .related-posts {
-    display: none;
-}
-
-.related-posts {
-    width: 160px;
-    float: left;
-    position: relative;
-    z-index: 10;
-}
-
-.related-posts-title {
-    padding-top: 6px;
-    border-top: 2px solid #222;
-    margin: 0 0 10px 0;
-    font-size: 0.675em;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #222;
-}
-
-.related-post {
-    display: block;
-    text-decoration: none;
-}
-
-.related-post+.related-post {
-    margin-top: 25px;
-}
-
-.related-post img {
-    display: block;
-    width: 100%;
-}
-
-.related-post .category {
-    margin: 10px 0 0;
-    font-size: 0.675em;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #0093C2;
-}
-
-.related-post .title {
-    color: #111;
-    margin: 4px 0 0;
-    font-size: 0.85em;
-    font-weight: 700;
-}
-
-.related-post:hover .title {
-    text-decoration: underline;
-}
+@import 'content/relatedposts';
 
 /* -------------------------------------------------------------------------------- */
 /*	10.	Entry Content
@@ -639,7 +584,7 @@ p.intro {
     font-size: 1.2em;
     line-height: 155%;
     font-weight: 700;
-    color: #0093C2;
+    color: $blue;
 }
 
 .post-content p,
@@ -703,11 +648,11 @@ p.intro {
 }
 
 :root .has-accent-color {
-    color: #0093C2;
+    color: $blue;
 }
 
 :root .has-accent-background-color {
-    background-color: #0093C2;
+    background-color: $blue;
 }
 
 :root .has-black-color {
@@ -960,7 +905,7 @@ section.wp-block-cover-image>h2 {
 /* -------------------------------------------------------------------------------- */
 .comments-container,
 .respond-container {
-    margin-top: 60px;
+    margin-top: 30px;
     position: relative;
 }
 
@@ -993,7 +938,7 @@ section.wp-block-cover-image>h2 {
 .comments-title .fa,
 .comment-reply-title .fa {
     margin-right: 6px;
-    color: #0093C2;
+    color: $blue;
     font-size: 22px;
     position: relative;
     top: -2px;
@@ -1084,7 +1029,7 @@ div.comment {
     width: 29px;
     height: 29px;
     border-radius: 99px;
-    background: #0093C2;
+    background: $blue;
     text-align: center;
     line-height: 1;
     color: #fff;
@@ -1155,7 +1100,7 @@ div.comment {
     display: inline-block;
     padding-bottom: 2px;
     margin-bottom: 20px;
-    border-bottom: 2px solid #0093C2;
+    border-bottom: 2px solid $blue;
     font-size: 0.75em;
     font-weight: 900;
     color: #111;
@@ -1178,7 +1123,7 @@ div.comment {
 }
 
 .pingbacklist a:hover {
-    color: #0093C2;
+    color: $blue;
 }
 
 /* Comment Navigation ------------------------ */
@@ -1197,8 +1142,8 @@ div.comment {
 }
 
 .comments-nav a:hover {
-    border-top-color: #0093C2;
-    color: #0093C2;
+    border-top-color: $blue;
+    color: $blue;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -1306,7 +1251,7 @@ div.comment {
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #0093C2;
+    color: $blue;
 }
 
 .page-edit-link .fa {
@@ -1356,7 +1301,7 @@ div.comment {
 
 .wrapper .search-button:hover {
     cursor: pointer;
-    color: #0093C2;
+    color: $blue;
 }
 
 /* Error 404 --------------------------------- */
@@ -1415,7 +1360,7 @@ div.comment {
 
 .archive-nav a:hover {
     border-top-color: currentColor;
-    color: #0093C2;
+    color: $blue;
 }
 
 .archive-nav li+li {
@@ -1431,14 +1376,13 @@ div.comment {
 
 .widget+.widget {
     padding-top: 40px;
-    border-top: 1px solid #ddd;
     margin-top: 40px;
 }
 
 .widget-title {
     display: inline-block;
     padding-bottom: 3px;
-    border-bottom: 2px solid #0093C2;
+    border-bottom: 2px solid $blue;
     margin-bottom: 15px;
     font-size: 0.8rem;
     font-weight: 900;
@@ -1523,7 +1467,7 @@ div.comment {
 .widget_meta li a:hover,
 .widget_nav_menu li a:hover,
 .widget_pages li a:hover {
-    color: #0093C2;
+    color: $blue;
     text-decoration: none;
 }
 
@@ -1576,7 +1520,7 @@ div.comment {
     color: #111;
 }
 
-.widget_rss li .rss-date {
+_rss li .rss-date {
     display: block;
     margin-top: 2px;
     font-size: 0.8em;
@@ -1640,7 +1584,7 @@ div.comment {
     font-size: 0.75em;
     font-weight: 900;
     text-transform: uppercase;
-    color: #0093C2;
+    color: $blue;
 }
 
 #wp-calendar th:first-child,
@@ -1684,7 +1628,7 @@ div.comment {
 
 .wp-calendar-nav a:hover,
 #wp-calendar tfoot a:hover {
-    color: #0093C2;
+    color: $blue;
 }
 
 /* Widget: Rowling List ---------------------- */
@@ -1753,96 +1697,7 @@ div.comment {
     text-decoration: underline;
 }
 
-/* -------------------------------------------------------------------------------- */
-/*	16.	Credits
-/* -------------------------------------------------------------------------------- */
-.credits {
-    background: #26272B;
-    position: relative;
-}
-
-.credits a {
-    text-decoration: none;
-}
-
-.credits .section-inner {
-    padding: 30px 0;
-    position: relative;
-}
-
-.to-the-top {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 99px;
-    background: #0093C2;
-    position: absolute;
-    top: -25px;
-    right: 0;
-}
-
-.to-the-top:hover {
-    color: #fff;
-    top: -30px;
-}
-
-.to-the-top .fa {
-    color: #fff;
-    display: block;
-    font-size: 28px;
-    margin-top: -16px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 50%;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
-    width: 100%;
-}
-
-.credits p {
-    color: #fff;
-    margin: 0;
-}
-
-.credits .copyright {
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-shadow: 0 1px 0 #111;
-}
-
-.credits .copyright a {
-    color: #fff;
-}
-
-.credits .copyright a:hover {
-    color: #0093C2;
-}
-
-.credits .attribution {
-    margin-top: 12px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #999;
-}
-
-.credits .attribution+.attribution {
-    margin-top: 6px;
-}
-
-.attribution a {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.attribution a:hover {
-    color: rgba(255, 255, 255, 0.5);
-    text-decoration: underline;
-}
+@import "footer/footer";
 
 /* -------------------------------------------------------------------------------- */
 /*	17.	Media Queries
@@ -1921,7 +1776,7 @@ div.comment {
         display: block;
         width: 40px;
         height: 40px;
-        background: #0093C2;
+        background: $blue;
         border-radius: 99px;
         position: absolute;
         top: 50%;
@@ -1983,7 +1838,7 @@ div.comment {
 
     /* Mobile Menu */
     .mobile-menu {
-        background: #0093C2;
+        background: $blue;
     }
 
     .mobile-menu li a {
@@ -2372,7 +2227,6 @@ div.comment {
     }
 
     .sidebar .widget+.widget {
-        border-top: 1px solid #ddd;
         margin-top: 40px;
         padding-top: 40px;
     }

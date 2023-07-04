@@ -2,7 +2,7 @@
 
 global $wp_query;
 
-if (!is_home() && $wp_query->max_num_pages > 1): ?>
+if ($wp_query->max_num_pages > 1): ?>
 
 	<div class="archive-nav">
 

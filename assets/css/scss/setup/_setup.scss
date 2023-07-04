@@ -6,7 +6,7 @@ body {
 }
 
 a {
-    color: #0093C2;
+    color: $blue;
     text-decoration: underline;
 }
 
@@ -221,7 +221,7 @@ blockquote:after {
     font-weight: 700;
     font-style: normal;
     text-align: center;
-    color: #0093C2;
+    color: $blue;
     position: absolute;
     top: 31px;
     left: 0px;
@@ -406,7 +406,7 @@ fieldset legend {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 10px 12px;
-    background: #0093C2;
+    background: $blue;
     color: #fff;
 }
 
@@ -471,7 +471,7 @@ input[type=submit] {
     margin: 0;
     border: none;
     border-radius: 2px;
-    background: #0093C2;
+    background: $blue;
     font-size: 0.85rem;
     line-height: 1;
     font-weight: 900;
