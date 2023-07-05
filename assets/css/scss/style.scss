@@ -292,85 +292,10 @@ Text Domain: test-theme
 /* -------------------------------------------------------------------------------- */
 /*	9.	Single Post
 /* -------------------------------------------------------------------------------- */
-/* Post Header ----------------------------------------- */
-.single-post .post-header {
-    margin-bottom: 40px;
-}
-
-.single-post .post-categories {
-    margin-bottom: 12px;
-    font-size: 0.9rem;
-}
-
-.single-post .post-title {
-    font-size: 2.5em;
-    line-height: 135%;
-    font-weight: 900;
-}
-
-.single-post .post-meta {
-    margin-top: 10px;
-    border-top: 1px solid #ddd;
-    padding-top: 16px;
-    font-size: 1rem;
-    color: #999;
-}
-
-.single-post .post-comments {
-    float: right;
-}
-
-.single-post .post-comments .fa {
-    position: relative;
-    top: -1px;
-    margin-right: 6px;
-}
-
-.single-post .post-meta a {
-    color: $blue;
-    text-decoration: none;
-}
-
-.single-post .post-meta a:hover {
-    text-decoration: underline;
-}
-
-/* Post Image ----------------------------------------- */
-.single-post .post-image {
-    display: block;
-    clear: both;
-    margin-bottom: 40px;
-}
-
-.single-post .post-image-caption {
-    padding: 17px 0 17px 24px;
-    border-bottom: 1px solid #ddd;
-    font-size: 0.9em;
-    line-height: 120%;
-    font-weight: 700;
-    color: #111;
-    position: relative;
-}
-
-.single-post .post-image-caption .fa {
-    color: $blue;
-    position: absolute;
-    top: 50%;
-    margin-top: -7px;
-    left: 0;
-}
-
-.single-post .post-image-caption a {
-    text-decoration: none;
-}
-
-.single-post .post-image-caption a:hover {
-    text-decoration: underline;
-}
+@import 'content/postheader';
 
 /* Post Inner -------------------------------- */
 .single-post .post-inner {
-    padding-left: 200px;
     position: relative;
     z-index: 5;
 }
@@ -412,66 +337,7 @@ Text Domain: test-theme
     color: #111;
 }
 
-/* Post Tags --------------------------------- */
-.post-tags {
-    margin-top: 35px;
-}
-
-.post-tags,
-.tagcloud {
-    line-height: 1;
-}
-
-.post-tags a,
-.tagcloud a {
-    background-color: #ddd;
-    color: #444;
-    display: inline-block;
-    font-size: 0.7rem !important;
-    font-weight: 900;
-    letter-spacing: 1px;
-    line-height: 1;
-    margin: 0 3px 8px 11px;
-    padding: 5px 6px 6px 3px;
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.tagcloud a {
-    background-color: #ccc;
-}
-
-.post-tags a {
-    margin-right: 8px;
-}
-
-.post-tags a:before,
-.tagcloud a:before {
-    content: "";
-    display: block;
-    border: 11px solid transparent;
-    border-left-width: 0;
-    border-right-color: #ddd;
-    position: absolute;
-    top: 0;
-    left: -11px;
-}
-
-.tagcloud a:before {
-    border-right-color: #ccc;
-}
-
-.post-tags a:hover,
-.tagcloud a:hover {
-    background: $blue;
-    color: #fff;
-}
-
-.post-tags a:hover:before,
-.tagcloud a:hover:before {
-    border-right-color: $blue;
-}
+@import 'content/posttags';
 
 /* Post Author ------------------------------- */
 .post-author {
@@ -560,84 +426,7 @@ Text Domain: test-theme
 }
 
 @import 'content/relatedposts';
-
-/* -------------------------------------------------------------------------------- */
-/*	10.	Entry Content
-/* -------------------------------------------------------------------------------- */
-.post-content {
-    font-family: "Lato", sans-serif;
-    font-size: 1em;
-}
-
-.post-content>*:first-child {
-    margin-top: 0;
-}
-
-.post-content>*:last-child {
-    margin-bottom: 0;
-}
-
-p.intro {
-    padding-bottom: 20px;
-    border-bottom: 3px double #ddd;
-    margin-bottom: 20px;
-    font-size: 1.2em;
-    line-height: 155%;
-    font-weight: 700;
-    color: $blue;
-}
-
-.post-content p,
-.post-content li {
-    line-height: 1.7;
-}
-
-.post-content h1,
-.post-content h2,
-.post-content h3 {
-    font-family: "Merriweather", Georgia, serif;
-    font-weight: 900;
-}
-
-/* Alignment Classes ------------------------- */
-.alignnone,
-.aligncenter,
-.alignwide,
-.alignfull {
-    margin: 2.5em auto;
-}
-
-.alignleft,
-.alignright {
-    margin-bottom: 1.2em;
-    max-width: 50%;
-}
-
-.wp-caption .alignleft,
-.wp-caption .alignright {
-    margin-bottom: 0;
-}
-
-.alignleft {
-    float: left;
-    margin-right: 30px;
-}
-
-.alignright {
-    float: right;
-    margin-left: 30px;
-}
-
-.aligncenter {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.aligncenter img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
+@import 'content/postcontent';
 
 /* -------------------------------------------------------------------------------- */
 /*	X.	Blocks

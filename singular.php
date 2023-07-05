@@ -89,9 +89,6 @@
 						<?php
 					endif;
 
-					if (is_single()) {
-						rowling_related_posts();
-					}
 
 					?>
 
@@ -131,7 +128,7 @@
 
 								<h4 class="title"><a href="<?php echo $author_posts_url; ?>"><?php the_author_meta('display_name'); ?></a></h4>
 
-								<?php
+								<!-- <?php
 
 								$author_description = get_the_author_meta('description');
 
@@ -139,13 +136,12 @@
 
 									<div class="post-author-description">
 										<?php echo wpautop($author_description); ?>
-									</div><!-- .post-author-description -->
+									</div>
 
-								<?php endif; ?>
+								<?php endif; ?> -->
 
 							</div><!-- .post-author -->
 
-							<?php rowling_related_posts(); ?>
 
 						<?php endif; ?>
 
@@ -153,6 +149,9 @@
 
 				</article><!-- .post -->
 
+				<?php if (is_single()):
+					rowling_related_posts();
+				endif; ?>
 				<?php
 
 				comments_template('', true);

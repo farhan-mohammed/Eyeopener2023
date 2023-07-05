@@ -1786,7 +1786,6 @@ a .post-timeago:hover {
 
 /* Post Inner -------------------------------- */
 .single-post .post-inner {
-  padding-left: 200px;
   position: relative;
   z-index: 5;
 }

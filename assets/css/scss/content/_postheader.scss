@@ -1,0 +1,75 @@
+/* Post Header ----------------------------------------- */
+.single-post .post-header {
+    margin-bottom: 40px;
+}
+
+.single-post .post-categories {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.single-post .post-title {
+    font-size: 2.5em;
+    line-height: 135%;
+    font-weight: 900;
+}
+
+.single-post .post-meta {
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 16px;
+    font-size: 1rem;
+    color: #999;
+}
+
+.single-post .post-comments {
+    float: right;
+}
+
+.single-post .post-comments .fa {
+    position: relative;
+    top: -1px;
+    margin-right: 6px;
+}
+
+.single-post .post-meta a {
+    color: $blue;
+    text-decoration: none;
+}
+
+.single-post .post-meta a:hover {
+    text-decoration: underline;
+}
+
+/* Post Image ----------------------------------------- */
+.single-post .post-image {
+    display: block;
+    clear: both;
+    margin-bottom: 40px;
+}
+
+.single-post .post-image-caption {
+    padding: 17px 0 17px 24px;
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9em;
+    line-height: 120%;
+    font-weight: 700;
+    color: #111;
+    position: relative;
+}
+
+.single-post .post-image-caption .fa {
+    color: $blue;
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    left: 0;
+}
+
+.single-post .post-image-caption a {
+    text-decoration: none;
+}
+
+.single-post .post-image-caption a:hover {
+    text-decoration: underline;
+}

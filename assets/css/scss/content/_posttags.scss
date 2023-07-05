@@ -1,0 +1,60 @@
+/* Post Tags --------------------------------- */
+.post-tags {
+    margin-top: 35px;
+}
+
+.post-tags,
+.tagcloud {
+    line-height: 1;
+}
+
+.post-tags a,
+.tagcloud a {
+    background-color: #ddd;
+    color: #444;
+    display: inline-block;
+    font-size: 0.7rem !important;
+    font-weight: 900;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 0 3px 8px 11px;
+    padding: 5px 6px 6px 3px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.tagcloud a {
+    background-color: #ccc;
+}
+
+.post-tags a {
+    margin-right: 8px;
+}
+
+.post-tags a:before,
+.tagcloud a:before {
+    content: "";
+    display: block;
+    border: 11px solid transparent;
+    border-left-width: 0;
+    border-right-color: #ddd;
+    position: absolute;
+    top: 0;
+    left: -11px;
+}
+
+.tagcloud a:before {
+    border-right-color: #ccc;
+}
+
+.post-tags a:hover,
+.tagcloud a:hover {
+    background: $blue;
+    color: #fff;
+}
+
+.post-tags a:hover:before,
+.tagcloud a:hover:before {
+    border-right-color: $blue;
+}

@@ -1,0 +1,77 @@
+/* -------------------------------------------------------------------------------- */
+/*	10.	Entry Content
+/* -------------------------------------------------------------------------------- */
+.post-content {
+    font-family: "Lato", sans-serif;
+    font-size: 1em;
+}
+
+.post-content>*:first-child {
+    margin-top: 0;
+}
+
+.post-content>*:last-child {
+    margin-bottom: 0;
+}
+
+p.intro {
+    padding-bottom: 20px;
+    border-bottom: 3px double #ddd;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 155%;
+    font-weight: 700;
+    color: $blue;
+}
+
+.post-content p,
+.post-content li {
+    line-height: 1.7;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+    font-family: "Merriweather", Georgia, serif;
+    font-weight: 900;
+}
+
+/* Alignment Classes ------------------------- */
+.alignnone,
+.aligncenter,
+.alignwide,
+.alignfull {
+    margin: 2.5em auto;
+}
+
+.alignleft,
+.alignright {
+    margin-bottom: 1.2em;
+    max-width: 50%;
+}
+
+.wp-caption .alignleft,
+.wp-caption .alignright {
+    margin-bottom: 0;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 30px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 30px;
+}
+
+.aligncenter {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aligncenter img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
