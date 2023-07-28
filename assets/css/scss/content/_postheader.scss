@@ -1,11 +1,14 @@
 /* Post Header ----------------------------------------- */
 .single-post .post-header {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .single-post .post-categories {
-    margin-bottom: 12px;
     font-size: 0.9rem;
+
+    &>a {
+        margin: 2px 4px;
+    }
 }
 
 .single-post .post-title {
@@ -20,6 +23,7 @@
     padding-top: 16px;
     font-size: 1rem;
     color: #999;
+    display: none;
 }
 
 .single-post .post-comments {
@@ -45,7 +49,7 @@
 .single-post .post-image {
     display: block;
     clear: both;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .single-post .post-image-caption {

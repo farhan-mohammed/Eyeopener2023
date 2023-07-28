@@ -1,0 +1,800 @@
+/* -------------------------------------------------------------------------------- */
+/*	17.	Media Queries
+/* -------------------------------------------------------------------------------- */
+@media (max-width: 850px) {
+
+
+    /* Structure ----------------------------- */
+    body {
+        background-color: #fff;
+    }
+
+    .wrapper.section-inner {
+        max-width: 100%;
+    }
+
+
+    .content {
+        float: none;
+        max-width: 88%;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding-left: 6%;
+        padding-right: 6%;
+        background: #f1f1f1;
+        border-top: 1px solid #ddd;
+        float: none;
+    }
+
+    /* Top Nav ------------------------------- */
+    .top-nav {
+        display: none;
+    }
+
+    /* Search Container ---------------------- */
+    .search-container .search-field {
+        padding: 30px 64px 30px 0;
+        font-size: 1.25em;
+        font-weight: 400;
+    }
+
+    .search-container .search-button {
+        margin-top: -17px;
+    }
+
+    .search-container .search-button .fa {
+        font-size: 32px;
+    }
+
+    /* Site Header --------------------------- */
+    .header {
+        padding: 25px 0;
+    }
+
+
+    .blog-header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-description {
+        margin: 0;
+
+        &>p {
+            text-align: center;
+
+        }
+    }
+
+    .blog-title,
+    .blog-description {
+        margin-right: 60px;
+    }
+
+    /* Navigation ---------------------------- */
+    .primary-menu {
+        display: none;
+    }
+
+    /* Nav Toggle */
+    .header .section-inner {
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: $blue;
+        border-radius: 99px;
+        position: absolute;
+        top: 50%;
+        margin-top: -20px;
+        right: 0;
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-toggle .bar {
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        border-radius: 1px;
+        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+        position: absolute;
+        left: 50%;
+        margin-left: -10px;
+        top: 50%;
+        transition: opacity 0.2s linear 0.2s, margin 0.2s linear 0.2s, transform 0.2s linear 0s;
+    }
+
+    .nav-toggle .bar:nth-child(1) {
+        margin-top: -7px;
+    }
+
+    .nav-toggle .bar:nth-child(2) {
+        margin-top: -1px;
+    }
+
+    .nav-toggle .bar:nth-child(3) {
+        margin-top: 5px;
+    }
+
+    .nav-toggle:hover {
+        cursor: pointer;
+    }
+
+    .nav-toggle.active .bar {
+        background: #fff;
+        transition: opacity 0.2s linear 0s, margin 0.2s linear 0s, transform 0.2s linear 0.2s;
+    }
+
+    .nav-toggle.active .bar:nth-child(1),
+    .nav-toggle.active .bar:nth-child(3) {
+        margin-top: -1px;
+    }
+
+    .nav-toggle.active .bar:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    .nav-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle.active .bar:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+        background: $blue;
+    }
+
+    .mobile-menu li a {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+    }
+
+    .mobile-menu a {
+        display: block;
+        padding: 20px 6%;
+        font-size: 0.8rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #fff;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-menu ul a {
+        padding-left: 12%;
+    }
+
+    .mobile-menu ul ul a {
+        padding-left: 18%;
+    }
+
+    .mobile-menu ul ul ul a {
+        padding-left: 24%;
+    }
+
+    .mobile-menu ul ul ul ul a {
+        padding-left: 30%;
+    }
+
+    .mobile-menu ul ul ul ul ul a {
+        padding-left: 36%;
+    }
+
+    .mobile-menu ul ul ul ul ul ul a {
+        padding-left: 42%;
+    }
+
+    .mobile-menu a:hover {
+        color: #fff;
+    }
+
+    /* Entry Content ------------------------- */
+    .alignwide,
+    .alignfull {
+        margin-left: calc(-6vw - 200px);
+        max-width: 100vw;
+        width: 100vw;
+    }
+
+    /* Sidebar ------------------------------- */
+    .sidebar .widget {
+        display: inline-block;
+        width: 47%;
+        vertical-align: top;
+        padding: 0;
+        margin: 0 0 60px 0;
+        border: none;
+    }
+
+    .sidebar .widget:nth-child(2n) {
+        margin-left: 5%;
+    }
+
+    /* Credits ------------------------------- */
+    .to-the-top {
+        width: 40px;
+        height: 40px;
+        top: -20px;
+    }
+
+    .to-the-top:hover {
+        top: -23px;
+    }
+
+    .posts .post {
+        min-width: 45%;
+        flex: 1;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 780px) {
+
+    /* Single Post --------------------------- */
+    .single-post .post-inner {
+        padding-left: 0;
+    }
+
+    .related-posts {
+        display: none;
+        width: 100%;
+        margin-top: 40px;
+        position: static;
+        top: auto;
+        left: auto;
+    }
+
+    .post-inner .related-posts {
+        display: block;
+    }
+
+    .related-post {
+        width: 30%;
+        float: left;
+    }
+
+    .related-post+.related-post {
+        margin: 0 0 0 5%;
+    }
+
+    /* Entry Content ------------------------- */
+    .post-inner>.post-content {
+        font-size: 1.1em;
+    }
+
+    .post-content .alignwide,
+    .post-content .alignfull {
+        margin-left: -6vw;
+    }
+
+    /* Comments ------------------------------ */
+    .comments,
+    .comment-respond form {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Element Base -------------------------- */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 30px 0 12px;
+    }
+
+    h1 {
+        font-size: 1.9em;
+    }
+
+    h2 {
+        font-size: 1.7em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.25em;
+    }
+
+    h5 {
+        font-size: 1.1em;
+    }
+
+    hr {
+        margin: 30px auto;
+    }
+
+    blockquote {
+        padding: 25px;
+    }
+
+    blockquote:after {
+        content: none;
+    }
+
+    .post-content fieldset {
+        padding: 20px;
+    }
+
+    /* Structure ----------------------------- */
+    .section-inner,
+    .content {
+        max-width: 90%;
+    }
+
+    .content {
+        padding: 30px 0;
+    }
+
+    /* Search Container ----------------------------- */
+    .search-container .search-field {
+        padding: 25px 50px 25px 0;
+        font-size: 1.1em;
+    }
+
+    .search-container .search-button {
+        margin-top: -15px;
+    }
+
+    .search-container .search-button .fa {
+        font-size: 28px;
+    }
+
+    /* Navigation ---------------------------- */
+    .mobile-menu a {
+        padding: 20px 5%;
+    }
+
+    .mobile-menu ul a {
+        padding-left: 10%;
+    }
+
+    .mobile-menu ul ul a {
+        padding-left: 15%;
+    }
+
+    .mobile-menu ul ul ul a {
+        padding-left: 20%;
+    }
+
+    .mobile-menu ul ul ul ul a {
+        padding-left: 25%;
+    }
+
+    .mobile-menu ul ul ul ul ul a {
+        padding-left: 30%;
+    }
+
+    .mobile-menu ul ul ul ul ul ul a {
+        padding-left: 35%;
+    }
+
+    /* Post Archive -------------------------- */
+    .post-title {
+        font-size: 1.25em;
+        line-height: 130%;
+    }
+
+    /* Single Post --------------------------- */
+    .single-post .post-header,
+    .single-post .post-image,
+    .single-post .flexslider {
+        margin-bottom: 25px;
+    }
+
+    .single-post .post-categories {
+        font-size: 0.75em;
+    }
+
+    .single-post .post-title {
+        font-size: 1.75em;
+        line-height: 130%;
+    }
+
+    .single-post .post-meta {
+        padding-top: 12px;
+        font-size: 0.9em;
+    }
+
+    .single-post .post-meta .resp {
+        display: none;
+    }
+
+    .single-post .post-meta:first-letter {
+        text-transform: uppercase;
+    }
+
+    .single-post .post-tags {
+        margin-top: 20px;
+    }
+
+    .post-author {
+        margin-top: 30px;
+        padding: 20px 20px 20px 100px;
+        min-height: 100px;
+    }
+
+    .post-author:before {
+        left: 44px;
+    }
+
+    .post-author .title {
+        font-size: 1em;
+    }
+
+    .post-author>.avatar {
+        margin-top: -30px;
+    }
+
+    .post-author img {
+        width: 60px;
+        padding: 3px;
+    }
+
+    /* Entry Content ------------------------- */
+    .post-content,
+    .post-inner>.post-content {
+        font-size: 1em;
+    }
+
+    .post-content p.intro {
+        font-size: 1.1em;
+        line-height: 140%;
+    }
+
+    /* Blocks -------------------------------- */
+    /* BLOCK: QUOTE */
+    .wp-block-quote.is-large,
+    .wp-block-quote.is-style-large {
+        padding: 25px;
+    }
+
+    /* Comments ------------------------------ */
+    .comments-container,
+    .respond-container {
+        margin-top: 40px;
+    }
+
+    .comments-title-container,
+    .comment-reply-title {
+        padding: 18px 0;
+        margin-bottom: 30px;
+    }
+
+    .comments-title,
+    .comment-reply-title {
+        font-size: 1em;
+    }
+
+    .comments-title .fa,
+    .comment-reply-title .fa {
+        font-size: 16px;
+    }
+
+    .comments-title-link {
+        font-size: 0.8em;
+        bottom: -1px;
+    }
+
+    .comment .avatar {
+        display: none;
+    }
+
+    .comment-inner {
+        margin-left: 0;
+    }
+
+    .comment-inner:before,
+    .comment-inner:after {
+        content: none;
+    }
+
+    .bypostauthor .comment-author-icon {
+        top: -9px;
+        left: -9px;
+    }
+
+    /* Pagination ---------------------------- */
+    .archive-nav {
+        margin-top: 40px;
+    }
+
+    .archive-nav .number {
+        display: none;
+    }
+
+    .archive-nav .archive-nav-older,
+    .archive-nav .archive-nav-newer {
+        position: static;
+    }
+
+    .archive-nav .archive-nav-newer {
+        float: left;
+    }
+
+    .archive-nav .archive-nav-older {
+        float: right;
+    }
+
+    /* Sidebar ------------------------------- */
+    .sidebar {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .sidebar .widget {
+        display: block;
+        margin: 0;
+        width: 100%;
+    }
+
+    .sidebar .widget+.widget {
+        margin-top: 40px;
+        padding-top: 40px;
+    }
+
+    .sidebar .widget:nth-child(2n) {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 500px) {
+
+    /* Entry Content ------------------------- */
+    .alignleft,
+    .alignright {
+        max-width: 100%;
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .alignleft img,
+    .alignright img {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    /* Respond ------------------------------- */
+    .comment-form-author,
+    .comment-form-email {
+        display: block;
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (max-width: 400px) {
+
+    /* Element Base -------------------------- */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 30px 0 12px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+
+    h5 {
+        font-size: 1.1em;
+    }
+
+    /* INPUTS */
+    input[type=text],
+    input[type=password],
+    input[type=email],
+    input[type=url],
+    input[type=date],
+    input[type=month],
+    input[type=time],
+    input[type=datetime],
+    input[type=datetime-local],
+    input[type=week],
+    input[type=number],
+    input[type=search],
+    input[type=tel],
+    input[type=color],
+    textarea {
+        padding: 15px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    /* Site Header --------------------------- */
+    .header {
+        padding: 22px 0;
+        border-top-width: 4px;
+    }
+
+    .blog-title {
+        font-size: 1.3em;
+        letter-spacing: 1px;
+    }
+
+    .blog-description {
+        display: none;
+    }
+
+    /* Navigation ---------------------------- */
+    .mobile-menu a {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    /* Content ------------------------------- */
+    .posts .post {
+        width: 100%;
+    }
+
+    .posts .post+.post,
+    .posts .post:nth-child(2) {
+        padding-top: 25px;
+        border-top: 1px solid #ddd;
+        margin-top: 25px;
+    }
+
+    .posts .post:nth-child(2n) {
+        margin-left: 0;
+    }
+
+    .posts .post .post-image {
+        margin-bottom: 18px;
+    }
+
+    .post-meta {
+        font-size: 0.85em;
+    }
+
+    /* Post Formats -------------------------- */
+    .single .flex-direction-nav {
+        display: none;
+    }
+
+    /* Single Post --------------------------- */
+    .single-post .post-title {
+        font-size: 1.5em;
+    }
+
+    .single-post .post-meta {
+        padding-top: 10px;
+        margin-top: 8px;
+        font-size: 0.9rem;
+    }
+
+    .single-post .post-meta .resp:first-of-type {
+        display: inline;
+    }
+
+    .single-post .post-meta .post-meta-author {
+        display: none;
+    }
+
+    .single-post .post-image-caption {
+        padding: 10px 0 10px 24px;
+        font-size: 0.85em;
+    }
+
+    /* Post Author */
+    .post-author {
+        padding: 20px;
+        margin-top: 25px;
+        min-height: intrinsic;
+    }
+
+    .post-author img {
+        display: none;
+    }
+
+    .post-author p {
+        font-size: 0.85em;
+    }
+
+    /* Related Posts */
+    .related-posts {
+        margin-top: 30px;
+    }
+
+    .related-post {
+        width: 47.5%;
+    }
+
+    .related-post:nth-child(3) {
+        display: none;
+    }
+
+    /* Entry Content ------------------------- */
+    .post-content p.intro {
+        font-size: 1em;
+    }
+
+    /* Pagination ---------------------------- */
+    .archive-header {
+        margin-bottom: 25px;
+    }
+
+    /* Archive Navigation */
+    .archive-nav {
+        margin-top: 30px;
+    }
+
+    /* Comments ------------------------------ */
+    .comments-title-container,
+    .comment-reply-title {
+        border-top-width: 3px;
+        padding: 12px 0;
+        margin-bottom: 20px;
+    }
+
+    .comments-title-link {
+        display: none;
+    }
+
+    .comment-inner {
+        padding: 20px;
+        border-radius: 4px;
+    }
+
+    .comment-header h4 {
+        font-size: 1em;
+    }
+
+    .comment-content {
+        font-size: 0.95em;
+    }
+
+    /* Respond ------------------------------- */
+    .comment-respond p {
+        margin-bottom: 15px;
+    }
+
+    /* Credits ------------------------------- */
+    .credits .section-inner {
+        padding: 20px 0;
+    }
+
+    .credits .copyright {
+        font-size: 0.8em;
+    }
+
+    .credits .attribution {
+        margin-top: 8px;
+        font-size: 0.65em;
+    }
+}

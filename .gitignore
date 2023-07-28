@@ -1,2 +1,4 @@
 assets/css/scss/*/*.css
 assets/css/scss/*/*.css.map
+.DS_Store
+.vscode/settings.json

@@ -130,11 +130,11 @@
 
 		</div><!-- .header -->
 
-		<div class="navigation">
+		<div id='nav' class="navigation">
 
 			<div class="section-inner group">
 
-				<ul id='nav' class="primary-menu reset-list-style dropdown-menu">
+				<ul class="primary-menu reset-list-style dropdown-menu">
 
 					<?php if (has_nav_menu('primary')) {
 

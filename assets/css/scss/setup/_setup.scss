@@ -201,9 +201,8 @@ h6 {
 }
 
 blockquote {
-    padding: 30px 30px 30px 90px;
-    background: #fafafa;
-    border: 1px solid #eee;
+    font-size: 2em;
+    text-align: center;
     position: relative;
     font-style: italic;
 }
@@ -212,35 +211,6 @@ blockquote p {
     font-style: italic;
 }
 
-blockquote:after {
-    content: "”";
-    width: 90px;
-    font-family: "Gothic A1", sans-serif;
-    font-size: 72px;
-    line-height: 72px;
-    font-weight: 700;
-    font-style: normal;
-    text-align: center;
-    color: $blue;
-    position: absolute;
-    top: 31px;
-    left: 0px;
-}
-
-blockquote cite {
-    display: block;
-    margin-top: 1.1em;
-    font-family: "Gothic A1", sans-serif;
-    font-size: 0.75em;
-    line-height: 120%;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-blockquote cite:before {
-    content: "— ";
-}
 
 hr {
     width: 128px;

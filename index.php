@@ -1,11 +1,19 @@
 <?php get_header(); ?>
+<?php
+$currentUrl = strtok($_SERVER['REQUEST_URI'], '?'); // Remove the query string from the URL
+$isFeaturesCategory = strpos($currentUrl, '/category/features') === 0;
+
+?>
+
 
 <div class="wrapper section-inner group">
 	<?php
 	get_template_part('feature_posts');
 	?>
+	<div
+		class="content  <?php echo ((is_single() && $isFeaturesCategory) || has_special_issues_category($categories)) ? 'full' : '' ?>">
 
-	<div class="content">
+		<?php has_special_issues_category($categories) ?>
 		<?php
 
 		$archive_title = '';
@@ -29,7 +37,6 @@
 		if ($archive_title || $archive_subtitle || $archive_description): ?>
 
 			<div class="archive-header">
-
 				<div class="group archive-header-inner">
 
 					<?php if ($archive_title): ?>

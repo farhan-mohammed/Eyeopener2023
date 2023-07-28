@@ -1,8 +1,7 @@
 <?php get_header(); ?>
-
 <div class="wrapper section-inner group">
-
-	<div class="content">
+	<div
+		class="content 1 <?php echo ((has_features_category(get_the_category()) || has_special_issues_category(get_the_category())) ? 'full' : 'x'); ?>">
 
 		<?php
 		if (have_posts()):
@@ -15,14 +14,8 @@
 
 					<div class="post-header">
 
-						<?php if (is_single() && has_category()): ?>
-							<p class="post-categories">
-								<?php the_category(', '); ?>
-							</p>
-							<?php
-						endif;
+						<?php
 
-						the_title('<h1 class="post-title">', '</h1>');
 
 						if (is_single()):
 
@@ -70,20 +63,9 @@
 
 					elseif (has_post_thumbnail() && !post_password_required()): ?>
 
-						<figure class="post-image">
-
-							<?php
-
-							the_post_thumbnail('post-image');
-
-							$image_caption = get_the_post_thumbnail_caption($post->ID);
-
-							if ($image_caption): ?>
-								<div class="post-image-caption"><span class="fa fw fa-camera"></span>
-									<?php echo wpautop($image_caption); ?>
-								</div>
-							<?php endif; ?>
-
+						<figure
+							class="post-image <?php echo ((is_single() && has_special_issues_category(get_the_category())) ? 'hidden' : 'xo'); ?>">
+							<?php the_post_thumbnail('post-image'); ?>
 						</figure><!-- .post-image -->
 
 						<?php
@@ -91,7 +73,17 @@
 
 
 					?>
-
+					<?php if (is_single() && has_category()): ?>
+						<div class="post-categories">
+							<?php the_category(' '); ?>
+						</div>
+						<?php
+					endif; ?>
+					<?php the_title('<h1 class="post-title">', '</h1>');
+					?>
+					<div class="post-date">
+						<?php the_time(get_option('date_format')); ?>
+					</div>
 					<div class="post-inner">
 
 						<div class="post-content entry-content">

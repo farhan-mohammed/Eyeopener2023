@@ -82,22 +82,30 @@ jQuery(document).ready(function ($) {
 
     resizeVideo(vidSelector);
 
-    $(window).resize(function () {
-        resizeVideo(vidSelector);
-    });
-
-    var header = $('#nav');
-    var sticky = header.offset().top;
+    var header = $('.header');
+    var nav = $('#nav');
+    var sticky = nav.offset().top;
+    console.log(sticky);
     function stickNav() {
         if ($(window).scrollTop() > sticky) {
-            header.addClass('sticky');
-            console.log('adding sticky');
+            nav.addClass('sticky');
+            header.css('margin-bottom', nav.outerHeight() + 'px');
         } else {
-            header.removeClass('sticky');
-            console.log('removing sticky');
+            nav.removeClass('sticky');
+            header.css('margin-bottom', '0');
         }
     }
     $(window).scroll(function () {
         stickNav();
+    });
+    $(window).resize(function () {
+        resizeVideo(vidSelector);
+        stickNav();
+    });
+
+    checkCurrentPage();
+
+    $(window).on('hashchange', function () {
+        checkCurrentPage();
     });
 });

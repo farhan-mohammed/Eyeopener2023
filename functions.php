@@ -5,6 +5,7 @@
    THEME SETUP
    --------------------------------------------------------------------------------------------- */
 
+
 if (!function_exists('rowling_setup')):
 	function rowling_setup()
 	{
@@ -36,13 +37,15 @@ if (!function_exists('rowling_setup')):
 		register_nav_menu('social', __('Social Menu', 'rowling'));
 
 		// Custom logo
-		add_theme_support('custom-logo', array(
-			'height' => 240,
-			'width' => 320,
-			'flex-height' => true,
-			'flex-width' => true,
-			'header-text' => array('blog-title', 'blog-description'),
-		)
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height' => 240,
+				'width' => 320,
+				'flex-height' => true,
+				'flex-width' => true,
+				'header-text' => array('blog-title', 'blog-description'),
+			)
 		);
 
 		// Make the theme translation ready
@@ -52,11 +55,33 @@ if (!function_exists('rowling_setup')):
 	add_action('after_setup_theme', 'rowling_setup');
 	function limit_homepage_posts($query)
 	{
-		if (is_home() && $query->is_main_query()) {
+		if ($query->is_main_query()) {
 			$query->set('posts_per_page', 12);
 		}
 	}
 	add_action('pre_get_posts', 'limit_homepage_posts');
+	function has_special_issues_category($categories)
+	{
+		$special_issues_category = 'Special Issues';
+		foreach ($categories as $category) {
+			if ($category->name === $special_issues_category) {
+				return true;
+			}
+		}
+		return false;
+	}
+	function has_features_category($categories)
+	{
+		$features_category = 'Features';
+		foreach ($categories as $category) {
+			if ($category->name === $features_category) {
+				return true;
+			}
+		}
+		return false;
+	}
+	add_action('after_setup_theme', 'has_features_category');
+
 endif;
 
 
@@ -577,68 +602,72 @@ if (!function_exists('rowling_add_block_editor_features')):
 
 		$accent_color = get_theme_mod('accent_color', '#0093C2');
 
-		add_theme_support('editor-color-palette', array(
+		add_theme_support(
+			'editor-color-palette',
 			array(
-				'name' => _x('Accent', 'Name of the accent color in the Block Editor palette', 'rowling'),
-				'slug' => 'accent',
-				'color' => $accent_color,
-			),
-			array(
-				'name' => _x('Black', 'Name of the black color in the Block Editor palette', 'rowling'),
-				'slug' => 'black',
-				'color' => '#111',
-			),
-			array(
-				'name' => _x('Dark Gray', 'Name of the dark gray color in the Block Editor palette', 'rowling'),
-				'slug' => 'dark-gray',
-				'color' => '#333',
-			),
-			array(
-				'name' => _x('Medium Gray', 'Name of the medium gray color in the Block Editor palette', 'rowling'),
-				'slug' => 'medium-gray',
-				'color' => '#555',
-			),
-			array(
-				'name' => _x('Light Gray', 'Name of the light gray color in the Block Editor palette', 'rowling'),
-				'slug' => 'light-gray',
-				'color' => '#777',
-			),
-			array(
-				'name' => _x('White', 'Name of the white color in the Block Editor palette', 'rowling'),
-				'slug' => 'white',
-				'color' => '#fff',
-			),
-		)
+				array(
+					'name' => _x('Accent', 'Name of the accent color in the Block Editor palette', 'rowling'),
+					'slug' => 'accent',
+					'color' => $accent_color,
+				),
+				array(
+					'name' => _x('Black', 'Name of the black color in the Block Editor palette', 'rowling'),
+					'slug' => 'black',
+					'color' => '#111',
+				),
+				array(
+					'name' => _x('Dark Gray', 'Name of the dark gray color in the Block Editor palette', 'rowling'),
+					'slug' => 'dark-gray',
+					'color' => '#333',
+				),
+				array(
+					'name' => _x('Medium Gray', 'Name of the medium gray color in the Block Editor palette', 'rowling'),
+					'slug' => 'medium-gray',
+					'color' => '#555',
+				),
+				array(
+					'name' => _x('Light Gray', 'Name of the light gray color in the Block Editor palette', 'rowling'),
+					'slug' => 'light-gray',
+					'color' => '#777',
+				),
+				array(
+					'name' => _x('White', 'Name of the white color in the Block Editor palette', 'rowling'),
+					'slug' => 'white',
+					'color' => '#fff',
+				),
+			)
 		);
 
 		/* Block Editor Font Sizes ----------- */
 
-		add_theme_support('editor-font-sizes', array(
+		add_theme_support(
+			'editor-font-sizes',
 			array(
-				'name' => _x('Small', 'Name of the small font size in Block Editor', 'rowling'),
-				'shortName' => _x('S', 'Short name of the small font size in the Block Editor.', 'rowling'),
-				'size' => 15,
-				'slug' => 'small',
-			),
-			array(
-				'name' => _x('Normal', 'Name of the normal font size in Block Editor', 'rowling'),
-				'shortName' => _x('N', 'Short name of the normal font size in the Block Editor.', 'rowling'),
-				'size' => 17,
-				'slug' => 'normal',
-			),
-			array(
-				'name' => _x('Large', 'Name of the large font size in Block Editor', 'rowling'),
-				'shortName' => _x('L', 'Short name of the large font size in the Block Editor.', 'rowling'),
-				'size' => 24,
-				'slug' => 'large',
-			),
-			array(
-				'name' => _x('Larger', 'Name of the larger font size in Block Editor', 'rowling'),
-				'shortName' => _x('XL', 'Short name of the larger font size in the Block Editor.', 'rowling'),
-				'size' => 28,
-				'slug' => 'larger',
-			),
-		)
+				array(
+					'name' => _x('Small', 'Name of the small font size in Block Editor', 'rowling'),
+					'shortName' => _x('S', 'Short name of the small font size in the Block Editor.', 'rowling'),
+					'size' => 15,
+					'slug' => 'small',
+				),
+				array(
+					'name' => _x('Normal', 'Name of the normal font size in Block Editor', 'rowling'),
+					'shortName' => _x('N', 'Short name of the normal font size in the Block Editor.', 'rowling'),
+					'size' => 17,
+					'slug' => 'normal',
+				),
+				array(
+					'name' => _x('Large', 'Name of the large font size in Block Editor', 'rowling'),
+					'shortName' => _x('L', 'Short name of the large font size in the Block Editor.', 'rowling'),
+					'size' => 24,
+					'slug' => 'large',
+				),
+				array(
+					'name' => _x('Larger', 'Name of the larger font size in Block Editor', 'rowling'),
+					'shortName' => _x('XL', 'Short name of the larger font size in the Block Editor.', 'rowling'),
+					'size' => 28,
+					'slug' => 'larger',
+				),
+			)
 		);
 
 	}
