@@ -306,15 +306,22 @@ figure {
 }
 
 .wp-caption-text,
-.gallery-caption,
-figcaption {
+.gallery-caption {
     color: #444;
     font-family: "Gothic A1", sans-serif;
     font-size: 0.9rem;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 130%;
     margin: 12px auto 0;
     text-align: center;
+}
+
+figcaption {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 130%;
+    margin: 0 auto;
 }
 
 .gallery-caption {

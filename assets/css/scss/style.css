@@ -423,15 +423,22 @@ figure {
 }
 
 .wp-caption-text,
-.gallery-caption,
-figcaption {
+.gallery-caption {
   color: #444;
   font-family: "Gothic A1", sans-serif;
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 130%;
   margin: 12px auto 0;
   text-align: center;
+}
+
+figcaption {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 130%;
+  margin: 0 auto;
 }
 
 .gallery-caption {
@@ -1141,13 +1148,12 @@ input[type=submit]:hover {
 .blog-description {
   flex: 1;
   box-sizing: border-box;
-  margin: 24px;
+  margin: 24px 0;
   font-size: 20px;
   font-weight: 700;
   font-size: 0.9em;
   line-height: 115%;
   font-style: italic;
-  margin-left: 100px;
   display: flex;
   align-items: center;
 }
@@ -1820,6 +1826,15 @@ a .post-timeago:hover {
   margin-bottom: 20px;
 }
 
+.image-caption {
+  padding: 8px 0 8px;
+  font-size: 0.9em;
+  line-height: 120%;
+  font-weight: 500;
+  color: #111;
+  position: relative;
+}
+
 .single-post .post-image-caption {
   padding: 17px 0 17px 24px;
   border-bottom: 1px solid #ddd;
@@ -2062,6 +2077,7 @@ a .post-timeago:hover {
   margin: 0 10px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 .related-post:hover {
   transform: scale(1.05);
@@ -2839,7 +2855,6 @@ div.comment {
 /* -------------------------------------------------------------------------------- */
 /* Archive Navigation ------------------------ */
 .archive-nav {
-  margin-top: 60px;
   border-top: 2px solid #ddd;
   text-align: center;
   position: relative;

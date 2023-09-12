@@ -27,6 +27,7 @@
     margin: 0 10px;
     display: flex;
     flex-direction: column;
+    flex: 1;
 
     &:hover {
         transform: scale(1.05);

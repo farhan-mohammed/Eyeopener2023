@@ -62,12 +62,21 @@
 						rowling_flexslider('post-image');
 
 					elseif (has_post_thumbnail() && !post_password_required()): ?>
-
 						<figure
 							class="post-image <?php echo ((is_single() && has_special_issues_category(get_the_category())) ? 'hidden' : 'xo'); ?>">
-							<?php the_post_thumbnail('post-image'); ?>
-						</figure><!-- .post-image -->
+							<?php
+							$image_id = get_post_thumbnail_id();
+							$image_caption = get_post_field('post_excerpt', $image_id);
 
+							if (has_post_thumbnail()): ?>
+								<?php the_post_thumbnail('post-image'); ?>
+								<?php if (!empty($image_caption)): ?>
+									<figcaption class="image-caption">
+										<?php echo esc_html($image_caption); ?>
+									</figcaption>
+								<?php endif; ?>
+							<?php endif; ?>
+						</figure><!-- .post-image -->
 						<?php
 					endif;
 
