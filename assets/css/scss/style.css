@@ -606,6 +606,10 @@ input[type=submit]:hover {
   margin: 0 auto;
 }
 
+p {
+  overflow-wrap: normal !important;
+}
+
 .wrapper {
   position: relative;
 }
@@ -1861,6 +1865,14 @@ a .post-timeago:hover {
   text-decoration: underline;
 }
 
+div.sharedaddy h3.sd-title {
+  font-family: inherit !important;
+  font-weight: 900 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 8px !important;
+}
+
 /* Post Inner -------------------------------- */
 .single-post .post-inner {
   position: relative;
@@ -2207,17 +2219,17 @@ a .post-timeago:hover {
   font-size: 0.675em;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 1px;
   color: #222;
   display: block;
   width: 100%;
+  margin-bottom: 1.5em;
 }
 
 #jp-relatedposts h3.jp-relatedposts-headline em:before {
   border-top: 1px solid #dcdcde;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   content: "";
-  display: block;
+  display: none !important;
   margin-bottom: 0 !important;
   min-width: 30px;
   width: 100%;
@@ -2225,7 +2237,8 @@ a .post-timeago:hover {
 
 #jp-relatedposts h3.jp-relatedposts-headline em {
   font-style: normal;
-  font-weight: 700;
+  font-weight: 900 !important;
+  letter-spacing: 1px;
 }
 
 #jp-relatedposts .jp-relatedposts-items {
@@ -2243,12 +2256,16 @@ a .post-timeago:hover {
   float: left;
   margin: 0 0 1em;
   width: 33%;
+  transition: all 0.1s ease-in-out;
+}
+#jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:hover {
+  transform: scale(1.05);
 }
 
 #jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post {
-  filter: alpha(opacity=80);
-  -moz-opacity: 0.8;
-  opacity: 0.8;
+  filter: alpha(opacity=100) !important;
+  -moz-opacity: 1 !important;
+  opacity: 1 !important;
   padding-right: 20px;
 }
 
@@ -2258,11 +2275,12 @@ a .post-timeago:hover {
 }
 
 #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:hover .jp-relatedposts-post-title a {
-  text-decoration: underline;
+  text-decoration: none !important;
 }
 
 #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post:hover {
   filter: alpha(opacity=100);
+  filter: none !important;
   -moz-opacity: 1;
   opacity: 1;
 }
@@ -2300,10 +2318,20 @@ a .post-timeago:hover {
   margin: 0;
   max-width: 100%;
   text-transform: none;
+  margin-top: 8px !important;
+}
+#jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title a {
+  color: #111 !important;
+  margin: 4px 0 0 !important;
+  font-size: 14.45px !important;
+  font-weight: 700 !important;
+}
+#jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title a:hover {
+  text-decoration: none;
 }
 
 #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a {
-  filter: alpha(opacity=100);
+  filter: alpha(opacity=100) !important;
   font-size: inherit;
   font-weight: 400;
   -moz-opacity: 1;
@@ -2313,6 +2341,7 @@ a .post-timeago:hover {
 
 #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post .jp-relatedposts-post-title a:hover {
   text-decoration: underline;
+  text-decoration: none !important;
 }
 
 #jp-relatedposts .jp-relatedposts-items .jp-relatedposts-post img.jp-relatedposts-post-img,

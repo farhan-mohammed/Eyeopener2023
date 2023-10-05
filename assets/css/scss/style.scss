@@ -51,6 +51,11 @@ Text Domain: test-theme
     margin: 0 auto;
 }
 
+p {
+    overflow-wrap: normal !important;
+}
+
+
 .wrapper {
     position: relative;
 }
@@ -319,6 +324,15 @@ Text Domain: test-theme
 /*	9.	Single Post
 /* -------------------------------------------------------------------------------- */
 @import 'content/postheader';
+
+div.sharedaddy h3.sd-title {
+    font-family: inherit !important;
+
+    font-weight: 900 !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px !important;
+}
 
 /* Post Inner -------------------------------- */
 .single-post .post-inner {
