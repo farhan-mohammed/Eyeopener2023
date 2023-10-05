@@ -249,7 +249,61 @@ if (!function_exists('rowling_related_posts')):
 	function rowling_related_posts($number_of_posts = 3)
 	{
 		?>
-
+		<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+			<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+			<div class="jp-relatedposts-items jp-relatedposts-items-visual jp-relatedposts-grid ">
+				<div class="jp-relatedposts-post jp-relatedposts-post0 jp-relatedposts-post-thumbs" data-post-id="112059"
+					data-post-format="false"><a class="jp-relatedposts-post-a"
+						href="/2023/01/tmu-snaps-losing-skid-at-winter-homecoming-game/?relatedposts_hit=1&amp;relatedposts_origin=114891&amp;relatedposts_position=0"
+						title="TMU snaps losing skid at Winter Homecoming game" data-origin="114891" data-position="0"><img
+							class="jp-relatedposts-post-img" loading="lazy"
+							src="https://i0.wp.com/theeyeopener.com/wp-content/uploads/2023/01/TMUMHKY_MatthewLin_Jan20.gif?resize=350%2C200&amp;ssl=1"
+							width="350" height="200" alt="A hockey player in a blue jersey"></a>
+					<h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a"
+							href="/2023/01/tmu-snaps-losing-skid-at-winter-homecoming-game/?relatedposts_hit=1&amp;relatedposts_origin=114891&amp;relatedposts_position=0"
+							title="TMU snaps losing skid at Winter Homecoming game" data-origin="114891" data-position="0">TMU
+							snaps losing skid at Winter Homecoming game</a></h4>
+					<p class="jp-relatedposts-post-excerpt">The TMU men's hockey team snapped their three game losing streak
+						Friday at home</p><time class="jp-relatedposts-post-date" datetime="January 20, 2023"
+						style="display: block;">January 20, 2023</time>
+					<p class="jp-relatedposts-post-context">In "All"</p>
+				</div>
+				<div class="jp-relatedposts-post jp-relatedposts-post1 jp-relatedposts-post-thumbs" data-post-id="112017"
+					data-post-format="false"><a class="jp-relatedposts-post-a"
+						href="/2023/01/second-straight-loss-leaves-bold-looking-for-change/?relatedposts_hit=1&amp;relatedposts_origin=114891&amp;relatedposts_position=1"
+						title="Second straight loss leaves Bold looking for change" data-origin="114891" data-position="1"><img
+							class="jp-relatedposts-post-img" loading="lazy"
+							src="https://i0.wp.com/theeyeopener.com/wp-content/uploads/2023/01/MHKY-vs-York-Feature.jpg?resize=350%2C200&amp;ssl=1"
+							width="350" height="200"
+							alt="A TMU men's hockey player chews on his mouthguard with one knee on the ice"></a>
+					<h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a"
+							href="/2023/01/second-straight-loss-leaves-bold-looking-for-change/?relatedposts_hit=1&amp;relatedposts_origin=114891&amp;relatedposts_position=1"
+							title="Second straight loss leaves Bold looking for change" data-origin="114891"
+							data-position="1">Second straight loss leaves Bold looking for change</a></h4>
+					<p class="jp-relatedposts-post-excerpt">The TMU men's hockey team lost its second consecutive game Saturday
+						and are looking for change as they continue their season</p><time class="jp-relatedposts-post-date"
+						datetime="January 14, 2023" style="display: block;">January 14, 2023</time>
+					<p class="jp-relatedposts-post-context">In "All"</p>
+				</div>
+				<div class="jp-relatedposts-post jp-relatedposts-post2 jp-relatedposts-post-thumbs" data-post-id="111588"
+					data-post-format="false"><a class="jp-relatedposts-post-a"
+						href="/2022/11/opportunity-to-host-nationals-once-in-a-lifetime-for-bold/?relatedposts_hit=1&amp;relatedposts_origin=114891&amp;relatedposts_position=2"
+						title="Opportunity to host nationals &amp;#8216;once in a lifetime&amp;#8217; for Bold"
+						data-origin="114891" data-position="2"><img class="jp-relatedposts-post-img" loading="lazy"
+							src="https://i0.wp.com/theeyeopener.com/wp-content/uploads/2022/11/TMUMHKY_NathanGerson_NOV.21.gif?resize=350%2C200&amp;ssl=1"
+							width="350" height="200" alt="Two hockey players in white jerseys celebrate"></a>
+					<h4 class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a"
+							href="/2022/11/opportunity-to-host-nationals-once-in-a-lifetime-for-bold/?relatedposts_hit=1&amp;relatedposts_origin=114891&amp;relatedposts_position=2"
+							title="Opportunity to host nationals &amp;#8216;once in a lifetime&amp;#8217; for Bold"
+							data-origin="114891" data-position="2">Opportunity to host nationals ‘once in a lifetime’ for
+							Bold</a></h4>
+					<p class="jp-relatedposts-post-excerpt">There’s still lots of hockey left to be played before TMU can look
+						toward nationals in 2024</p><time class="jp-relatedposts-post-date" datetime="November 21, 2022"
+						style="display: block;">November 21, 2022</time>
+					<p class="jp-relatedposts-post-context">In "All"</p>
+				</div>
+			</div>
+		</div>
 		<div class="related-posts">
 
 			<p class="related-posts-title">
@@ -502,7 +556,9 @@ if (!function_exists('rowling_comment')):
 
 						<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 
-							<?php __('Pingback:', 'rowling'); ?> 				<?php comment_author_link(); ?> 				<?php edit_comment_link(__('Edit', 'rowling'), '<span class="edit-link">', '</span>'); ?>
+							<?php __('Pingback:', 'rowling'); ?>
+							<?php comment_author_link(); ?>
+							<?php edit_comment_link(__('Edit', 'rowling'), '<span class="edit-link">', '</span>'); ?>
 
 						</li>
 						<?php
@@ -547,7 +603,9 @@ if (!function_exists('rowling_comment')):
 
 										<div class="fleft">
 											<div class="fa fw fa-clock-o"></div><a class="comment-date-link"
-												href="<?php echo esc_url(get_comment_link($comment->comment_ID)); ?>"><?php echo get_comment_date(get_option('date_format')); ?></a>
+												href="<?php echo esc_url(get_comment_link($comment->comment_ID)); ?>">
+												<?php echo get_comment_date(get_option('date_format')); ?>
+											</a>
 											<?php edit_comment_link(__('Edit', 'rowling'), '<div class="fa fw fa-wrench"></div>', ''); ?>
 										</div>
 

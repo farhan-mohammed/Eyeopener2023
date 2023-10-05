@@ -27,6 +27,10 @@
 
 
 	<header class="header-wrapper">
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-VH5192F416"></script>
+		<script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-VH5192F416'); </script>
+		<!-- Google tag (gtag.js) -->
 		<?php if (has_nav_menu('secondary') || has_nav_menu('social')): ?>
 			<div class="top-nav">
 				<div class="section-inner group">
